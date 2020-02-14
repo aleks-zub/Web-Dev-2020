@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form id="registration" method="POST" action="http://httpbin.org/post">
+        <fieldset>
+            <legend>Форма регистрации</legend>
+            <div>
+                <label for="fullname">ФИО</label>
+                <input id="fullname" name="fullname" type="text" required="required">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required="required">
+            </div>
+            <div>
+                <label for="phone">Номер телефона</label>
+                <input id="phone" name="phone" type="tel" required="required" pattern="\(\d{3,4}\) \d{2,3}-\d{2}-\d{2}">
+            </div>
+            <div>
+                <label for="dateofbirth">Дата рождения</label>
+                <input id="dateofbirth" name="dateofbirth" type="date">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Параметры доставки</legend>
+            <div>
+                <label for="adress">Адрес</label>
+                <textarea name="adress" id="adress" rows="5"></textarea>
+            </div>
+            <div>
+                <label for="postcode">Почтовый индекс</label>
+                <input id="postcode" name="postcode" type="number" pattern="\d{5}\">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Предпочтительный способ получения уведомлений</legend>
+            <div>
+                <input id="emailmessage" name="message" type="radio">
+                <label for="emailmessage">По Email</label>
+            </div>
+            <div>
+                <input id="phonemessage" name="message" type="radio">
+                <label for="phonemessage">По телефону</label>
+            </div>
+            <div>
+                <input id="nomessage" name="message" type="radio">
+                <label for="nomessage">Не уведомлять меня</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <button type="submit">Отправить данные</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
