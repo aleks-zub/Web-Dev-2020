@@ -11,6 +11,24 @@
             var ctx = canvas.getContext("2d");
             ctx.fillStyle = "rgb(100,0,0)"
             ctx.fillRect(20, 10, 50, 70);
+
+            var canvas = document.getElementById("my_canvas1");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "black"
+            ctx.fillRect(10, 10, 130, 130);
+            ctx.fillStyle = "white"
+            ctx.fillRect(25, 25, 100, 100);
+
+
+            var canvas = document.getElementById("my_canvas2");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "rgb(100,0,0)"
+            ctx.fillRect(20, 10, 50, 70);
+
+            var canvas = document.getElementById("my_canvas3");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "rgb(100,0,0)"
+            ctx.fillRect(20, 10, 50, 70);
         }
     </script>
     <link rel="stylesheet" href="styles/main.css">
@@ -20,6 +38,9 @@
 
 <body onload="createImage();">
     <canvas id="my_canvas" width="150" height="150"></canvas>
+    <canvas id="my_canvas1" width="150" height="150"></canvas>
+    <canvas id="my_canvas2" width="300" height="150"></canvas>
+    <canvas id="my_canvas3" width="150" height="300"></canvas>
 </body>
 
 </html>
