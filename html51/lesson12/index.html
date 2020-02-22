@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+        function createImage() {
+            var canvas = document.getElementById("my_canvas");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "rgb(100,0,0)"
+            ctx.fillRect(20, 10, 50, 70);
+        }
+    </script>
+    <link rel="stylesheet" href="styles/main.css">
+    <title>RegionIT-WEB-03016 </title>
+
+</head>
+
+<body onload="createImage();">
+    <canvas id="my_canvas" width="150" height="150"></canvas>
+</body>
+
+</html>
