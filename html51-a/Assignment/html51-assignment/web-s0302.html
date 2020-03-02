@@ -20,17 +20,41 @@
     <form>
         <fieldset>
             <legend>Конференция</legend>
-            Название конференции* <input type="text">
+            <div>Название конференции* <input type="text"></div>
         </fieldset>
         <fieldset>
             <legend>Сведения об участнике</legend>
-            Фамилия<input type="text" required="required"> Имя* <input type="text"> Отчество*
-            <input type="text"> Должность*
-            <input type="text"> E-mail <input type="email" required="required"> Телефон* <input type="tel"> Мобильный телефон* <input type="tel"> Факс* <input type="text"> Промо-код: <input type="number">
+            <div>Фамилия<input type="text" required="required"></div>
+            <div>Имя* <input type="text"> </div>
+            <div>Отчество* <input type="text"> </div>
+            <div>Должность* <input type="text"> </div>
+            <div>E-mail <input type="email" required="required"> </div>
+            <div>Телефон* <input type="tel"> </div>
+            <div>Мобильный телефон* <input type="tel"> </div>
+            <div>Факс* <input type="text"> </div>
+            <div>Промо-код: <input type="number"></div>
         </fieldset>
         <fieldset>
             <legend>Сведения об организации:</legend>
-
+            <div>Полное название организации <input type="text" required="required"></div>
+            <div>Страна регистрации:* <input type="text"></div>
+            <div>Город:* <input type="text"></div>
+            <div>ИНН (VAT-номер для организаций из стран ЕС): <input type="number" required="required"></div>
+        </fieldset>
+        <fieldset>
+            <legend>Контактное лицо по оформлению документов:</legend>
+            <div>Фамилия<input type="text" required="required"></div>
+            <div>Имя* <input type="text"> </div>
+            <div>Отчество* <input type="text"> </div>
+            <div>Почтовый адрес (с индексом)* <input type="number"></div>
+            <div>Телефон* <input type="tel"> </div>
+            <div>Факс* <input type="text"> </div>
+            <div>E-mail <input type="email" required="required"> </div>
+        </fieldset>
+        <fieldset>
+            <legend>Дополнительно:</legend>
+            <div>Примечание <textarea name="describe" id="1" cols="30" rows="10"></textarea></div>
+            <div><button type="submit" value="apply now">Зарегестрироваться</button> </div>
         </fieldset>
     </form>
 </body>
