@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/StyleSheet1.css">
+    <title>localStorage Demo</title>
+    <script>
+        function saveNote() {
+
+            var name = document.getElementById('notename').value;
+            var content = document.getElementById('notecontent').value;
+            if (content == '') {
+                alert('enter valid note text');
+            } else {
+                if (name == 0) {
+                    alert('enter valid note name');
+                } else {
+                    localStorage[name] = content;
+                }
+            }
+        }
+
+        function listLoad() {
+
+            var list = document.getElementById('notelist');
+            for (var i in localStorage) {
+
+                var a = document.createElement('a');
+                a.setAttribute('onclick', "loadNote('" + i + "'); return false;");
+                a.innerText = i;
+                var element = document.createElement('li');
+                element.appendChild(a);
+                list.appendChild(element);
+            }
+        }
+
+        function loadNote(v) {
+
+            document.getElementById('notecontent').value = localStorage[v];
+            document.getElementById('notename').value = v;
+        }
+
+        function deleteNote() {
+
+            var name = document.getElementById('notename').value;
+            if (name != '') {
+
+                localStorage.removeItem(name);
+            } else {
+                alert('note not found');
+            }
+        }
+    </script>
+</head>
+
+<body onload="listLoad();">
+    <div id="header">
+        <h1>
+            Пример работы с localStorage
+        </h1>
+    </div>
+    <div id="notes">
+        <h3>
+            Спиисок записей
+        </h3>
+        <ol id="notelist"></ol>
+    </div>
+    <div id="note">
+        <form id="formote">
+            <fieldset>
+                <legend>NotePad Demo</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="notefield">
+                                Наименование
+                            </label>
+                        </td>
+                        <td colspan="2">
+                            <input id="notename" type="text" class="notefield" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="notefield">
+                                Текст записи
+                            </label>
+                        </td>
+                        <td colspan="2">
+                            <textarea name="" id="notecontent" cols="" rows="10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td class="notebtn">
+                            <button id="save" type="submit" onclick="saveNote();">Сохранить</button>
+                        </td>
+                        <td class="notebtn">
+                            <button id="delete" type="submit" onclick="deleteNote();">Удалить</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+    <div id="footer">
+        <p class="footertext">
+            2013 г.
+        </p>
+    </div>
+</body>
+
+</html>
