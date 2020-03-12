@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<meta name="robots" content="noindex">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS Bin</title>
 
 </head>
 
@@ -13,24 +14,19 @@
     <input type="text" id="b">
     <button onclick="solveTask()">Розв'язати</button>
     <output id="res"></output>
-    <output id="sum"></output>
-    <output id="mul"></output>
-    <output id="per"></output>
+
     <script id="jsbin-javascript">
         function solveTask() {
-            var a = document.getElementById('a')
-            var b = document.getElementById('b')
-            var res = document.getElementById('res')
-            var sum = document.getElementById('sum');
-            var mul = document.getElementById('mul');
-            var per = document.getElementById('per');
+            var a = document.getElementById("a").value
+            var b = document.getElementById("b").value
+            var res = document.getElementById("res")
 
-            res.innerHTML = "Результат";
-            sum.innerHTML = "a+b";
-            mul.innerHTML = "a*b";
-            per.innerHTML = "a/b";
+
+            res.innerHTML = "Сума=" + a + b;
+
         }
     </script>
+
 </body>
 
 </html>
