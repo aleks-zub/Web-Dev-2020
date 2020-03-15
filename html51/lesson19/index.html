@@ -77,25 +77,25 @@
         </script>
     </div>
     <div>
-        <input type="text" id="x">
-        <input type="text" id="y">
+        <input type="text" id="c">
+        <input type="text" id="z">
         <button onclick="solveTask5()">Розвязати рівняння</button>
-        <output id="fun1"></output>
-        <output id="fun2"></output>
+        <output id="res5"></output>
+        <output id="res6"></output>
 
 
         <script>
             function solveTask5() {
-                var x = document.getElementById("x").value | 0;
-                var y = document.getElementById("y").value | 0;
-                var fun1 = document.getElementById("fun1");
-                var fun2 = document.getElementById("fun2");
+                var x = document.getElementById("c").value | 0;
+                var y = document.getElementById("z").value | 0;
+                var res5 = document.getElementById("res5");
+                var res6 = document.getElementById("res6");
 
                 var alg = (x + y) / 2;
-                var gem = SQRT(x * y);
+                var gem = Math.sqrt(x * y);
 
-                fun1.innerHTML = "Середнє арифметичне = " + alg;
-                fun2.innerHTML = "Середнє геометричне = " + gem;
+                res5.innerHTML = "Середнє арифметичне = " + alg;
+                res6.innerHTML = "Середнє геометричне = " + gem;
             }
         </script>
     </div>
