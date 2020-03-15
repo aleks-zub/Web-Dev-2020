@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        var canvas, ctx;
+        var video;
+
+        function init() {
+            canvas = document.getElementById("canvas1");
+            ctx = canvas.getContext('2d');
+            video = document.getElementById("myVideo");
+        }
+
+        function snapshot() {
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        }
+
+        function onSuccess(stream) {
+            var output = document.getElementById('myVideo');
+            output.src = window.URL.createObjectURL(stream);
+        }
+
+        function onError() {}
+        if (navigator.getUserMedia = (navigator.getUserMedia ||
+                navigator.webkitGetUserMedia ||
+                navigator.mozGetUserMedia ||
+                navigator.msGetUserMedia)) {
+
+            navigator.getUserMedia({
+                video: true
+            }, onSuccess, onError);
+        } else {
+            alert("getUserMedia API not supported");
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div>
+        <canvas id="canvas1" width="400" height="300"></canvas>
+    </div>
+    <video id="myVideo" autoplay>
+Fallback msg here.
+</video>
+    <div>
+        <button onclick="snapshot()"> Take snapshot </button>
+    </div>
+</body>
+
+</html>
