@@ -10,23 +10,95 @@
 </head>
 
 <body>
-    <input type="text" id="a">
-    <input type="text" id="b">
-    <button onclick="solveTask()">Розв'язати</button>
-    <output id="res"></output>
-
-    <script id="jsbin-javascript">
-        function solveTask() {
-            var a = document.getElementById("a").value
-            var b = document.getElementById("b").value
-            var res = document.getElementById("res")
+    <div>
+        <input type="text" id="a">
+        <input type="text" id="b">
+        <button onclick="solveTask()">Розв'язати</button>
+        <output id="res"></output>
+        <output id="res1"></output>
+        <output id="res2"></output>
 
 
-            res.innerHTML = "Сума=" + a + b;
+        <script id="jsbin-javascript">
+            function solveTask() {
+                var a = document.getElementById("a").value | 0;
+                var b = document.getElementById("b").value | 0;
+                var res = document.getElementById("res");
+                var res1 = document.getElementById("res1");
+                var res2 = document.getElementById("res2");
 
-        }
-    </script>
+                var sum = a + b;
+                var dif = a - b;
+                var mul = a * b;
 
+                res.innerHTML = "Сума=" + sum;
+                res1.innerHTML = "Різниця=" + dif;
+                res2.innerHTML = "Добуток=" + mul;
+
+            }
+        </script>
+    </div>
+    <div>
+        <input type="text" id="x">
+        <input type="text" id="y">
+        <button onclick="solveTask1()">Розвязати рівняння</button>
+        <output id="res3"></output>
+
+        <script>
+            function solveTask1() {
+                var x = document.getElementById("x").value | 0;
+                var y = document.getElementById("y").value | 0;
+                var res3 = document.getElementById("res3");
+                var func = (Math.abs(x) - Math.abs(y)) / (1 + Math.abs(x * y));
+
+                res3.innerHTML = "Результат = " + func;
+            }
+        </script>
+    </div>
+    <div>
+        <input type="text" id="l">
+        <button onclick="solveTask2()">Знайти геометричні характеристики куба</button>
+        <output id="val"></output>
+        <output id="val1"></output>
+
+
+        <script>
+            function solveTask2() {
+                var l = document.getElementById("l").value | 0;
+                var val = document.getElementById("val");
+                var val1 = document.getElementById("val1");
+
+                var obm = l * l * l;
+                var pln = l * l;
+                val.innerHTML = "Обєм куба =" + obm;
+                val1.innerHTML = "Площа бічної поверхні =" + pln;
+
+            }
+        </script>
+    </div>
+    <div>
+        <input type="text" id="x">
+        <input type="text" id="y">
+        <button onclick="solveTask5()">Розвязати рівняння</button>
+        <output id="fun1"></output>
+        <output id="fun2"></output>
+
+
+        <script>
+            function solveTask5() {
+                var x = document.getElementById("x").value | 0;
+                var y = document.getElementById("y").value | 0;
+                var fun1 = document.getElementById("fun1");
+                var fun2 = document.getElementById("fun2");
+
+                var alg = (x + y) / 2;
+                var gem = SQRT(x * y);
+
+                fun1.innerHTML = "Середнє арифметичне = " + alg;
+                fun2.innerHTML = "Середнє геометричне = " + gem;
+            }
+        </script>
+    </div>
 </body>
 
 </html>
