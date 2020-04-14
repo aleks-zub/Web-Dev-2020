@@ -18,6 +18,18 @@
 <body>
 
     <form class="form-horizontal">
+
+        <div class="radio">Как к Вам обращаться(Mr/Mrs/Sen):
+            <div>
+                <label><input type="radio" name="optradio">Mr</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="optradio">Mrs</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="optradio">Sen</label>
+            </div>
+        </div>
         <div class="form-group">
             <label for="username" class="control-label col-md-3">Фамилия, Имя:</label>
             <div class="col-md-6">
@@ -34,56 +46,64 @@
             <div class="col-md-6">
                 <div class="input-group">
                     <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="glyphicon glyphicon-education"></span>
                     </div>
                     <input type="text" class="form-control" name="username" id="username" />
                 </div>
             </div>
         </div>
         <div class="form-group">
-            <label for="username" class="control-label col-md-3">Username:</label>
+            <label for="username" class="control-label col-md-3">Email:</label>
             <div class="col-md-6">
                 <div class="input-group">
                     <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="glyphicon glyphicon-envelope"></span>
                     </div>
                     <input type="text" class="form-control" name="username" id="username" />
                 </div>
             </div>
         </div>
         <div class="form-group">
-            <label for="username" class="control-label col-md-3">Username:</label>
+            <label for="username" class="control-label col-md-3">Должность, Специальность:</label>
             <div class="col-md-6">
                 <div class="input-group">
                     <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="glyphicon glyphicon-pencil"></span>
                     </div>
                     <input type="text" class="form-control" name="username" id="username" />
                 </div>
             </div>
         </div>
         <div class="form-group">
-            <label for="username" class="control-label col-md-3">Username:</label>
+            <label for="username" class="control-label col-md-3">Город:</label>
             <div class="col-md-6">
                 <div class="input-group">
                     <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="glyphicon glyphicon-home"></span>
                     </div>
                     <input type="text" class="form-control" name="username" id="username" />
                 </div>
             </div>
         </div>
         <div class="form-group">
-            <label for="username" class="control-label col-md-3">Username:</label>
-            <div class="col-md-6">
-                <div class="input-group">
-                    <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-user"></span>
-                    </div>
-                    <input type="text" class="form-control" name="username" id="username" />
-                </div>
+            <label for="comment">Как нам сделать конференцию более полезной и интересной?:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <div class="radio">Участие:
+            <div>
+                <label><input type="radio" name="optradio">Очное</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="optradio">Заочное</label>
             </div>
         </div>
+        <div class="radio">Участник: доктор наук(yes/no)
+            <div>
+                <label><input type="radio" name="optradio">yes</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="optradio">No</label>
+            </div>
     </form>
 
 
