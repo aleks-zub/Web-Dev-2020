@@ -9,7 +9,7 @@ var seatSchema = new mongoose.Schema({
     ages_categories: String,
     type_of_implementation: String,
     quantity_of_fixators: String,
-    material: String,
+    material: String
 });
 
 module.exports = mongoose.model('Seat', seatSchema);
