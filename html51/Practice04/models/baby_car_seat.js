@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var seatSchema = new mongoose.Schema({
+var baby_car_seatSchema = new mongoose.Schema({
     imagePath: String,
     producer: String,
     country: String,
@@ -12,4 +12,4 @@ var seatSchema = new mongoose.Schema({
     material: String
 });
 
-module.exports = mongoose.model('Seat', seatSchema);
+module.exports = mongoose.model('Baby_car_seat', baby_car_seatSchema);
