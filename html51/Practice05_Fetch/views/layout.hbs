@@ -10,7 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="/javascripts/summernote/summernote.min.css" rel="stylesheet"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -25,6 +25,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="/javascripts/summernote/summernote.min.js"></script>
     <script src="/javascripts/client.js"></script>
+    <script>
+      window.onload = function() {
+         fillTable();
+            editDialog.producer = this.document.getElementById('producer');
+            editDialog.country = this.document.getElementById('country');
+            editDialog.type = this.document.getElementById('type');
+            editDialog.color = this.document.getElementById('color');
+            editDialog.saveButton = this.document.getElementById('baby_car_seatSave');
+            editDialog.saveButton.onclick = saveBaby_car_seat;
+              
+              $('#type').summernote({
+           
+             toolbar: [
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['strikethrough', 'superscript', 'subscript']]
+             ],
+             // airmode: true,        
+             //    popover: {
+             //        air: [
+             //         ['color', ['color']],
+             //         ['font', ['bold', 'underline', 'clear']]
+             //       ]
+             //    }
+               });
+        };
+    </script>
   </body>
 </html>

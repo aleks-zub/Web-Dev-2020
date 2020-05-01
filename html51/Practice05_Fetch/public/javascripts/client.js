@@ -13,7 +13,9 @@ function showEditDialog() {
         .then(res => {
             editDialog.producer.value = res.producer;
             editDialog.country.value = res.country;
-            editDialog.type.value = res.type;
+            //editDialog.type.value = res.type;
+            let markupStr = res.type;
+            $('#type').summernote('code', markupStr);
             editDialog.color.value = res.color;
             editDialog.saveButton.dataset.id = this.dataset.id;
         })
@@ -24,7 +26,8 @@ function saveBaby_car_seat() {
     let data = {
         producer: editDialog.producer.value,
         country: editDialog.country.value,
-        type: editDialog.type.value,
+        // type: editDialog.type.value,
+        type: $('#type').summernote('code'),
         color: editDialog.color.value
     };
     fetch(`/baby_car_seats/${this.dataset.id}`, {
@@ -69,12 +72,12 @@ function fillTable() {
         .catch(err => alert(err));
 }
 
-window.onload = function() {
-    fillTable();
-    editDialog.producer = this.document.getElementById('producer');
-    editDialog.country = this.document.getElementById('country');
-    editDialog.type = this.document.getElementById('type');
-    editDialog.color = this.document.getElementById('color');
-    editDialog.saveButton = this.document.getElementById('baby_car_seatSave');
-    editDialog.saveButton.onclick = saveBaby_car_seat;
-};
+// window.onload = function() {
+// fillTable();
+//  editDialog.producer = this.document.getElementById('producer');
+//editDialog.country = this.document.getElementById('country');
+// editDialog.type = this.document.getElementById('type');
+// editDialog.color = this.document.getElementById('color');
+// editDialog.saveButton = this.document.getElementById('baby_car_seatSave');
+// editDialog.saveButton.onclick = saveBaby_car_seat;
+//};
