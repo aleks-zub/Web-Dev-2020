@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var baby_car_seatsRouter = require('./routes/baby_car_seats');
+var announsRouter = require('./routes/announs');
 
 var app = express();
 
@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/baby_car_seats', baby_car_seatsRouter);
+app.use('/announs', announsRouter);
 
 //database configuration
 mongoose.connect('mongodb+srv://student:Start2020@cluster0-qse6h.mongodb.net/sample-database', {

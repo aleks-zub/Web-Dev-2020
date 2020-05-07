@@ -31,14 +31,15 @@
     <script>
       window.onload = function() {
          fillTable();
-            editDialog.producer = this.document.getElementById('producer');
-            editDialog.country = this.document.getElementById('country');
-            editDialog.type = this.document.getElementById('type');
-            editDialog.color = this.document.getElementById('color');
-            editDialog.saveButton = this.document.getElementById('baby_car_seatSave');
-            editDialog.saveButton.onclick = saveBaby_car_seat;
+            editDialog.date_of_registr = this.document.getElementById('date_of_registr');
+            editDialog.date_of_update = this.document.getElementById('date_of_update');
+            editDialog.tit = this.document.getElementById('tit');
+            editDialog.artic = this.document.getElementById('artic');
+            editDialog.author = this.document.getElementById('author');
+            editDialog.saveButton = this.document.getElementById('announSave');
+            editDialog.saveButton.onclick = saveAnnoun;
               
-              $('#type').summernote({
+              $('#tit').summernote({
            
              toolbar: [
                 ['style', ['bold', 'italic', 'underline', 'clear']],
