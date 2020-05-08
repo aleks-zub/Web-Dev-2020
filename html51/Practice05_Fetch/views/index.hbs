@@ -1,0 +1,65 @@
+
+<div class="container">
+    
+    <div class="jumbotron">
+        <div class="container">
+            <h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+        </div>
+    </div>
+    
+     <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <table id="baby_car_seatsTable" class="table table-bordered table-hover">
+                   <thead>
+                      <tr>
+                          <th>Производитель</th>
+                          <th>Страна</th>
+                          <th>Тип</th>
+                          <th>Цвет</th>
+                          <th>Действия</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+              </table>
+         </div>
+     </div>
+</div>
+
+
+<div class="modal fade" id="editModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Редактирование кресел</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                     <div class="form-group">
+                       <label for="producer">Производитель</label>
+                       <input type="text" class="form-control" id="producer" placeholder="Input field">
+                     </div>
+                     <div class="form-group">
+                       <label for="country">Страна</label>
+                       <input type="text" class="form-control" id="country" placeholder="Input field">
+                     </div>
+                     <div class="form-group">
+                       <label for="type">Тип</label>
+                       <textarea type="text" class="form-control" id="type" placeholder="Input field"></textarea>
+                     </div>
+               <div class="form-group">
+                       <label for="color">Цвет</label>
+                       <input type="text" class="form-control" id="color" placeholder="Input field">
+                   </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="baby_car_seatSave">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
