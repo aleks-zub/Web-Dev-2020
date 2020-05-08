@@ -1,0 +1,27 @@
+<div class="container">
+     <h1>{{title}}</h1>
+     <p>Welcome to {{title}}</p>
+
+<table class="table table-hover">
+     <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>Producer:</th>
+            <th>Ages categories:</th>
+            <th>Material:</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each baby_car_seats}}
+        <tr>
+            <td><img src="{{imagePath}}"></td>
+            <td>{{producer}}</td>
+            <td>{{ages_categories}}</td>
+            <td>{{material}}</td>
+            <td><a href="/edit-baby_car_seat/{{_id}}" class="btn btn-primary">Edit</a>
+                <a href="/delete-baby_car_seat/{{_id}}" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>

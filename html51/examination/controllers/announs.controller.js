@@ -1,4 +1,4 @@
-const baby_car_seat = require('../model/announ');
+const announ = require('../model/announ');
 //Create and save a new announ
 exports.create = (req, res) => {};
 
